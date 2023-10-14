@@ -9,7 +9,7 @@ export default function Navbar() {
     <div id="bottomNavBar">
       <button className="navButton" onClick={() => navigate('/')}>Start</button>
       <button className="navButton" onClick={() => navigate('/history')}>History</button>
-      <button className="navButton">More</button>
+      <button className="navButton" onClick={() => navigate('/settings')}>Settings</button>
     </div>
   );
 }

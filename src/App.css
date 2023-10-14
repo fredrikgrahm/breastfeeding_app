@@ -112,3 +112,42 @@ input[type="time"] {
 .close-popup:hover {
   background-color: #ff4d94;
 }
+
+
+/* Existing styles can be moved under .light if they are for the light theme */
+.light {
+  /* Example */
+  background-color: white;
+  color: black;
+  /* Your current button colors, text colors, etc. */
+}
+
+.light .button {
+  /* Your existing button styles for light theme */
+  background-color: blue;
+  color: white;
+}
+
+
+
+.dark {
+  background-color: #121212;  /* Very dark gray, almost black */
+  color: #E4E4E4;  /* Light gray text */
+}
+
+.dark .button {
+  background-color: #6a0dad;  /* Purple */
+  color: white;
+}
+
+.dark .text {
+  color: #E4E4E4; /* Light gray text */
+}
+
+.dark .header {
+  color: #BB86FC; /* Lighter purple for headers or highlights */
+}
+
+.dark .link {
+  color: #BB86FC; /* Lighter purple for links */
+}
