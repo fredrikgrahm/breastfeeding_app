@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import "./styles.css";
+import { useTheme } from './ThemeContext';
+
 
 export default function FeedingApp() {
   const [isTimerRunning, setIsTimerRunning] = useState(false);
@@ -11,6 +12,7 @@ export default function FeedingApp() {
   const [feedingHistory, setFeedingHistory] = useState([]);
   const navigate = useNavigate(); 
   const [feedingSessions, setFeedingSessions] = useState([]);
+  const { theme } = useTheme();
 
   useEffect(() => {
     let timerInterval;
@@ -55,7 +57,8 @@ export default function FeedingApp() {
   };
 
   return (
-    <div className="app-container">
+    <div className={`app-container ${theme}`}>
+    
       <div id="timerContainer">
         <p id="timerDisplay">{timerDisplay}</p>
         <button id="timerButton" onClick={toggleTimer}>
@@ -83,6 +86,7 @@ export default function FeedingApp() {
         </div>
         <p>Current side: {feedingSide}</p>
       </div>
+    
     </div>
   );
 }
