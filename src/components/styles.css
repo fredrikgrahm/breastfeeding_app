@@ -93,3 +93,19 @@
   background-color: #6a3d9a;
   color: white;
 }
+
+.settings-container label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.settings-container input[type="checkbox"],
+.settings-container select {
+  margin-left: 10px;
+}
