@@ -66,3 +66,30 @@
 .purple-dark #bottomNavBar {
   background-color: #6a3d9a;
 }
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.settings-button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.pinkish-light .settings-button {
+  background-color: #ffc1f3;
+  color: white;
+}
+
+.purple-dark .settings-button {
+  background-color: #6a3d9a;
+  color: white;
+}
