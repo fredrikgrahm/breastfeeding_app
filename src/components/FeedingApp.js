@@ -43,13 +43,16 @@ export default function FeedingApp() {
         duration: timer,
         side: feedingSide,
       };
-      setFeedingHistory([...feedingHistory, newSession]);
-      localStorage.setItem(
-        "feedingHistory",
-        JSON.stringify([...feedingHistory, newSession])
-      );
+      const updatedHistory = [...feedingHistory, newSession];
+      setFeedingHistory(updatedHistory);
+      localStorage.setItem("feedingHistory", JSON.stringify(updatedHistory));
     }
-    setIsTimerRunning(!isTimerRunning);
+    setIsTimerRunning(prevIsTimerRunning => {
+      if (prevIsTimerRunning) {
+        setTimer(0); // Reset the timer after updating the history
+      }
+      return !prevIsTimerRunning;
+    });
   };
 
   const chooseFeedingSide = (side) => {
