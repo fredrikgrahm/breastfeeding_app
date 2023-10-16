@@ -21,12 +21,7 @@ h1 {
   margin: 20px 0;
 }
 
-button {
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
+
 
 input[type="time"] {
   border: 1px solid #ccc;
